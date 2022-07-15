@@ -1,0 +1,1 @@
+{"name":"Local: AggressiveCow","url":"c:\\Users\\sc\\Desktop\\Desktop file\\Algo c++\\BinarySearch\\AggressiveCow.cpp","tests":[{"id":1649225471272,"input":"1\n5 3\n1\n2\n8\n4\n9","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\sc\\Desktop\\Desktop file\\Algo c++\\BinarySearch\\AggressiveCow.cpp","group":"local","local":true}
