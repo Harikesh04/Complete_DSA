@@ -316,3 +316,6 @@ int main()
 // finding the lsetbit
 
 // int lSetBit = res & ~(res - 1)
+
+//x<<y 
+//x>>y

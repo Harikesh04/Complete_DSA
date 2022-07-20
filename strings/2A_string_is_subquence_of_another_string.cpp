@@ -1,15 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool isSubsequence(string &s1, string &s2)
+bool isSubsequence(string &txt, string &ptn)
 {
-    int n = s1.size();
-    int m = s2.size();
-    int j = 0; // pointing to the second string
-    int i = 0;
+    int n = txt.size();
+    int m = ptn.size();
+    int j = 0; // pointing to the second string{the candidate of the subsequence}
+    int i = 0;// pointing to the fist string
     while (i < n && j < m)
     {
-        if (s1[i] == s2[j])
+        if (txt[i] == ptn[j])
         {
             j++;
             i++;
@@ -29,7 +29,7 @@ bool isSubsequence(string &s1, string &s2)
 
 // recursive approach
 
-bool isSubsequence_R(string &s1, string &s2, int n, int m)
+bool isSubsequence_R(string &txt, string &ptn, int n, int m)
 {
     if (m == 0)
     {
@@ -44,21 +44,21 @@ bool isSubsequence_R(string &s1, string &s2, int n, int m)
         return false;
     }
 
-    if (s1[n - 1] == s2[m - 1])
+    if (txt[n - 1] == ptn[m - 1])
     {
-        return isSubsequence_R(s1, s2, n - 1, m - 1);
+        return isSubsequence_R(txt, ptn, n - 1, m - 1);
     }
     else
     {
-        return isSubsequence_R(s1, s2, n - 1, m);
+        return isSubsequence_R(txt, ptn, n - 1, m);
     }
 }
 
 int main(int argc, char const *argv[])
 {
-    string s1, s2;
-    cin >> s1 >> s2;
-    // cout<<isSubsequence(s1, s2);
-    cout << isSubsequence_R(s1, s2, s1.size(), s2.size());
+    string txt, ptn;
+    cin >> txt >> ptn;
+    // cout<<isSubsequence(txt, ptn);
+    cout << isSubsequence_R(txt, ptn, txt.size(), ptn.size());
     return 0;
 }
