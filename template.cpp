@@ -73,7 +73,7 @@ int mismatchBit(ll A, ll B)
 {
     int count = 0;
 
-    // since, the numbers are less than 2^31
+    
     // run the loop from '0' to '31' only
     for (int i = 0; i < 32; i++)
     {
@@ -150,6 +150,7 @@ ll moduloMultiplication(ll a, ll b, ll mod)
 }
 ll powermod(ll x, ll y, ll p)
 {
+    //binary exponentiation
     ll res = 1;
     x = x % p;
     if (x == 0)
@@ -157,7 +158,7 @@ ll powermod(ll x, ll y, ll p)
     while (y > 0)
     {
         if (y & 1)
-            res = (res * x) % p;
+            res = (res * x*1LL) % p;
         y = y >> 1;
         x = (x * x) % p;
     }

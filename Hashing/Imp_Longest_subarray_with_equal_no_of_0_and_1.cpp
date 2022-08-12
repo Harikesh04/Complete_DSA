@@ -9,7 +9,7 @@ using namespace std;
 // ans =6;
 
 // there is a catch in problem first convert all zero to -1;
-// then the problem is reduced into find the shortest subarray with sum 0;
+// then the problem is reduced into find the longest subarray with sum 0;
 
 int main(int argc, char const *argv[])
 {
@@ -35,12 +35,12 @@ int main(int argc, char const *argv[])
         pfsum += v[i];
         if (pfsum == 0)
         {
-            res = i + 1;
+            res = i + 1; 
         }
           if (m.find(pfsum) == m.end())
         {
             m[pfsum] = i;
-        }
+        } 
         if (m.find(pfsum) != m.end())
         {
             res = max(res, i - m[pfsum]);

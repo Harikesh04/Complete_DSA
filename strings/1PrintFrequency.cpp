@@ -29,7 +29,7 @@ using namespace std;
 
 //2 Optimised approach 
 
-// since the char is in from a to z i.e 26 char therefore store in map only 1 t0 26
+// since the char is in from a to z i.e 26 char therefore store in map only 1 to 26
 
 int main(int argc, char const *argv[])
 {
