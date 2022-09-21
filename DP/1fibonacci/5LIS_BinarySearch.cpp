@@ -10,7 +10,7 @@ int LIS(int ar[], int n)
     for (int i = 1; i < n; i++)
     {
         int j = v.size();
-        if (ar[i] > v[j - 1])
+        if (ar[i] > v[j - 1])//CURR ELE IS GREATER THAN LAST VALUE OF VECTOR
         {
             v.push_back(ar[i]);
         }

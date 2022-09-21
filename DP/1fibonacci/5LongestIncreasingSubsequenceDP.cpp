@@ -25,7 +25,7 @@ int LIS(int ar[], int n)
     {
        res=max(res,LIS[i]);
     }
-   return res;
+   return res;          
     
 }
 

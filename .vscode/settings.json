@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*html": "html",
         "iostream": "cpp",
         "ostream": "cpp",
         "array": "cpp",
@@ -9,7 +10,8 @@
         "regex": "cpp",
         "utility": "cpp",
         "valarray": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "vector": "cpp"
     },
     "C_Cpp.errorSquiggles": "Enabled"
 }

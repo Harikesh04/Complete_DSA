@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
 
     for (auto &it:m)
     {
-       cout<<"firstname"<<it.first.first<<" "<<"lastname"<<it.first.second<<endl;
+       cout<<"firstname"<<it.first.first<<"  lastname"<<it.first.second<<endl;
        auto list_of_marks = it.second;
        for (int i = 0; i < list_of_marks.size(); i++)
        {

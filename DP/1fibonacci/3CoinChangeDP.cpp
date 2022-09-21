@@ -9,6 +9,8 @@ using namespace std;
 
 
 
+
+
 int GetCount(int ar[], int n, int sum)
 {
     int dp[sum+1][n+1];
@@ -16,7 +18,7 @@ int GetCount(int ar[], int n, int sum)
     {
        dp[0][i]=1; // when sum is 0 the possiblity is always one.
     }
-    for (int i = 0; i <= sum; i++)
+    for (int i = 0; i <= sum; i++)   
     {
        dp[i][0]=0;//// when coin is 0 the possiblity is always 0.
     }
@@ -24,8 +26,8 @@ int GetCount(int ar[], int n, int sum)
     {
       for (int j = 1; j <=n; j++)
       {
-        dp[i][j]=dp[i][j-1];
-        if (ar[j-1]<=i)
+        dp[i][j]=dp[i][j-1];// IGNORE THE JTH COIN
+        if (ar[j-1]<=i)// IF JTH COIN IS LESS THEN THE SUM THEN INCLUDE THE JTH COIN
         {
            dp[i][j]+=dp[i-ar[j-1]][j];
         }
