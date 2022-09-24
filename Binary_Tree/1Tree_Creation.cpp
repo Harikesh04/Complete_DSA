@@ -1,11 +1,11 @@
 # include<bits/stdc++.h>
 using namespace std;
 
-struct Node{
+struct Node{// creating a structure Node
     int key;
     Node *left;
     Node *right;
-    Node(int k){
+    Node(int k){//constructor function
         key=k;
         left=right=NULL;
     }

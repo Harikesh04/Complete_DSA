@@ -4,6 +4,15 @@ using namespace std;
 const int M = 1e9 + 7;
 ll dp[1000001]; 
 
+ //state:
+ //dp[sum]= all possible way to make sum using different coins
+
+ //transition:
+ //dp[sum]= dp[sum-c0]+dp[sum-c1]+dp[sum-c2]+......dp[sum-cn];
+ //i.e all possible ways to make given sum with coin 1 + all possible ways to make sum with coin 2 + ....all possible ways to make given sum with coin n.
+
+ //bc: when sum is zero atleast one way always exist.
+
 int main(int argc, char const *argv[])
 {
     ll n, x,i,j;
