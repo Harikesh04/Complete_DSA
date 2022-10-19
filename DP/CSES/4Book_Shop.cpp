@@ -2,6 +2,12 @@
 using namespace std;
 int dp[1001][100001];
 
+// dp state: dp[i][j]= max no. of pages we can get from j  amount and when first i books are allowed .
+
+//transition: dp[i][j]
+        //     /          \
+        //   dp[i-1][j]     dp[i-1][j-p[i]]+pg[i]
+
 int Book_Shop(vector<int> &pr, vector<int> &pg, int n, int x)
 {
 

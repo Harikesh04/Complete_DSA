@@ -4,10 +4,12 @@ using namespace std;
 const int M = 1e9 + 7;
 ll dp[1000001]; 
 
+// dp state: dp[i]= min no. of coin required to get sum i. 
+
 int main(int argc, char const *argv[])
 {
-    ll n, x,i,j;
-    cin >> n >> x;
+    ll n, sum,i,j;
+    cin >> n >> sum;
     vector<ll> v(n);
 
     for ( i = 0; i < n; i++)
@@ -16,12 +18,12 @@ int main(int argc, char const *argv[])
     }
     
    
-    for (int j = 0; j <= x; j++)
+    for (int j = 0; j <= sum; j++)
     {
        dp[j]=INT_MAX;
     }
     dp[0]=0;
-    for ( j = 1; j <= x; j++)
+    for ( j = 1; j <= sum; j++)
     {
 
         for ( i = 0; i < n; i++)
@@ -33,5 +35,5 @@ int main(int argc, char const *argv[])
         }
     }
 
-    cout<<(dp[x]==INT_MAX? -1 :dp[x])<<endl;
+    cout<<(dp[sum]==INT_MAX? -1 :dp[sum])<<endl;
 }

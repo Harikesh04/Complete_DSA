@@ -11,12 +11,12 @@ ll dp[1000001];
  //dp[sum]= dp[sum-c0]+dp[sum-c1]+dp[sum-c2]+......dp[sum-cn];
  //i.e all possible ways to make given sum with coin 1 + all possible ways to make sum with coin 2 + ....all possible ways to make given sum with coin n.
 
- //bc: when sum is zero atleast one way always exist.
+ //bc: when sum is zero atleast one way always esumist.
 
 int main(int argc, char const *argv[])
 {
-    ll n, x,i,j;
-    cin >> n >> x;
+    ll n, sum,i,j;
+    cin >> n >> sum;
     vector<ll> v(n);
 
     for ( i = 0; i < n; i++)
@@ -30,7 +30,7 @@ int main(int argc, char const *argv[])
     for (i = 0; i < n; i++ )
     {
 
-        for (j = 0; j <= x; j++ )
+        for (j = 0; j <= sum; j++ )
         {
             if (j - v[i] >= 0)
             {
@@ -40,5 +40,5 @@ int main(int argc, char const *argv[])
         }
     }
 
-    cout<<dp[x]<<endl;
+    cout<<dp[sum]<<endl;
 }

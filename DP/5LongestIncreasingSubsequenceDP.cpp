@@ -4,6 +4,10 @@ using namespace std;
 // time complexity O(N^2),
 //space complexity O(N);
 
+//state:dp[i]=length of longest increasing subse that ends at ith ele of the array.
+
+//transition we can add the current ele to the prev sub if it will be greater than its last ele.
+
 int LIS(int ar[], int n)
 {
     int LIS[n];
