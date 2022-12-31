@@ -145,5 +145,26 @@ cout<<vv[1][2];
 
 
    
-    return 0;
+
+vector<vector<int>>v3(3,vector<int>(3));
+vector<vector<int>>v3(3,vector<int>(3,-1));//intializing the matrix with -1
+
+for(int i=0;i<3;i++){
+  for(int j=0;j<3;j++){
+    cin>>v3[i][j];
+
+  }
+}
+for(int i=0;i<3;i++ ){
+  for(int j=0;j<3;j++){
+   cout<<v3[i][j]<<" ";
+
+  }
+  cout<<endl;
+}
+
+
+
+
+
 }

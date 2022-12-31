@@ -256,71 +256,10 @@ string removeCharacters(string S, char c)
 
 void solve()
 {
-    int n;
-    cin >> n;
-    vector<int> v(n);
-    unordered_map<int, int> mp;
-
-    for (int i = 0; i < n; i++)
-    {
-        cin >> v[i];
-        mp[v[i]]++;
-    }
-    if (mp.size() == 1)
-    {
-        if (n % 2 == 0)
-        {
-
-            for (int i = n; i >= 1; i--)
-            {
-                cout << i << " ";
-            }
-            cout << endl;
-            return;
-        }
-        else
-        {
-            cout << n << " ";
-            for (int i = 1; i < n; i++)
-            {
-                cout << i << " ";
-            }
-            cout << endl;
-            return;
-        }
-    }
-    for (auto &it : mp)
-    {
-        if (it.second == 1)
-        {
-            cout << "-1" << endl;
-            return;
-        }
-    }
-    // ans possible
-    for (auto &it : mp)
-    {
-        int n = it.second;
-        if (it.second % 2 == 1)
-        {
-            cout << n << " ";
-            for (int i = 1; i < n; i++)
-            {
-                cout << i << " ";
-            }
-            cout << endl;
-            return;
-        }
-        else
-        {
-            for (int i = n; i >= 1; i--)
-            {
-                cout << i << " ";
-            }
-            cout << endl;
-            return;
-        }
-    }
+   int x=64;
+   int y = __builtin_popcount(x);
+   cout<<y<<endl;
+    
 }
 int main()
 {
@@ -328,14 +267,14 @@ int main()
     cin.tie(0);
     cout.tie(0);
 
-    ll t;
-    cin >> t;
-    while (t--)
-    {
-        solve();
-    }
+    // ll t;
+    // cin >> t;
+    // while (t--)
+    // {
+    //     solve();
+    // }
 
-    // solve();
+    solve();
     return 0;
 }
 

@@ -12,9 +12,11 @@ int main(int argc, char const *argv[])
 
    //INSERTION IN A STRING
    string s="ilili";
-  s.insert(4,"kesh");
+  s.insert(4,"kesh");//insertition will takes place in 4th index.
   s.insert(4,"k");
 s.push_back('a');
+cout<<s<<endl;//ililkeshi
+
 
 
 
@@ -99,7 +101,7 @@ int n=stoi(s);
 //TOTAL NUMBER OF NON EMPTY SUBSTRING FROM STRING OF SIZE N IS n*(n+1)/
 
 
-// TO CONVERT ALPHABET FROM A TO Z TO 1 TO 26.
+// TO CONVERT ALPHABET FROM a TO z TO 1 TO 26.
 string s="abcdef";
 
 for (int i = 0; i < s.size(); i++)
