@@ -37,7 +37,7 @@ int main()
     {
         cin >> ar[i];
     }
-    maxCircularSubarraySum(ar, n);
+    minSubarraySum(ar, n);
 
     return 0;
 }
