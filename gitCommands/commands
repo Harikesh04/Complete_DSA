@@ -11,12 +11,25 @@ git checkout branch_name // to switch on a particular branch.
 			OR
 git ckeckout -b <branch_name> // this will create as well as switch on that branch
 
-Merge:
+#Merge:
 
 git merge <branch_name> => this will merge the branch_name with the curr branch in which we are .
 
 
-Push code on github
+##Push code on github
 
 git push <branch_name> // this will push code on a particular branch 
+
+
+##Rebase: uses this commit suppose we are working on some banch and master have added some more commits then ? to get those commits in our branch behind our commit 
+
+git rebase <master or branch_name>
+
+##To restore all the changes and go to last commit
+
+git reset --hard HEAD//This command resets the repository to the last commit. It discards all the changes you made to the working directory and the staging area and sets the repository to the last commit.
+
+
+
+
 
