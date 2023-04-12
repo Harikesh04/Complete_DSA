@@ -119,17 +119,20 @@ int main(int argc, char const *argv[])
 // // char(i+'a')
 
 string s="hello how are you";
-// separate the string with the whitespaces 
-vector<string>v;
-            istringstream ss(s);//uses this with #include <sstream> header file
-            // this is a class in c++ whose obj we can create and use it 
-            string word;
-            while( ss >> word ) v.push_back( word );
-            //>> extraction operator
 
-            for(int i=0;i<v.size();i++){
-                cout<<v[i]<<endl;
-            }
+stringstream ss(s);
+string token="";
+
+// ? here with the help of stringstream we break string in token here we are breaking it on basis of ' '. 
+
+string s2="/home//foo/";
+
+// ! here we can break token with breaking point '/' by using getline(ss,token,'/')
+
+
+while(getline(ss,token,' ')){
+    cout<<token<<endl;
+}
 
 
 return 0;
